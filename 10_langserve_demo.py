@@ -7,6 +7,8 @@ from fastapi import FastAPI
 from langserve import add_routes
 import uvicorn
 
+# If BOM error in .env then run file "fix_env_bom.py" first
+# If syxtax error then run "export PYTHONIOENCODING=utf-8" in bash terminal first
 
 _ = load_dotenv(find_dotenv())
 openai_api_key = os.environ["OPENAI_API_KEY"]
